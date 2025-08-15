@@ -1,69 +1,26 @@
-# React + TypeScript + Vite
+# Все высшие точки России 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это новая версия моего проекта - Все высшие точки России, который я создал в начале 2024 года. 
 
-Currently, two official plugins are available:
+Проект версии 1.0 реализован с помощью семантической вёрстки и ванильного JS, с применением CSS проепроцессора SaSS.
+Версия 1.0 расположена на домене https://allhighpoints.ru
+GitHub: https://github.com/LVJameskirk/AllHighPoints
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+В версии 2.0 планируется перевести проект на технологии React и Typescript, переписать статический сайт на работу с данными, чтобы превратить его в полноценное расширяемое приложение. В дальнейших планах развитие функционала и создание сервера на NodeJS + БД (решение по ней пока не принято).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Итерации проекта
+1. Версия 2.0. Перенос сайта на React и Typescript:
+  * Адаптация существующего сайта на React
+  * Добавление Typescript для надёжности, с заделом на будущее
+  * Переписывание логики на работу с данными (хранения данных в JSON)
+2. Версия 2.1. Фикс багов и добавление новых функций:
+  * Добавление функции поиска по точкам
+  * Подключение апи погоды
+  * ...
+3. Версия 2.2. Регистрация пользователей:
+  * Добавление формы регистрации
+  * Добавление формы для входа
+  * Простая страница пользователя
+  * Релизация простого сервера для регистрации пользователей
+  * База данных с таблицей пользователей
+4. Версия 2.3...
